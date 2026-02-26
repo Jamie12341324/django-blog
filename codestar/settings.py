@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-bmh9r&_w5=^v512vo$9oyyc$!$15!!hgj+naz#3k&$)5w2gp%v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.herokuapp.com','127.0.0.1']
 
@@ -91,15 +91,15 @@ CSRF_TRUSTED_ORIGINS = [
 
 DATABASES = {
 #    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-  #'default2': {
-  #    'ENGINE': 'django.db.backends.postgresql',
-  #    'NAME': 'codestar',
-  #    'USER': 'postgres',
-  #    'PASSWORD': 'pandora99',
-  #    'HOST': 'localhost',
-  #    'PORT': '5432'
-  #},
-  'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+  'default': {
+      'ENGINE': 'django.db.backends.postgresql',
+      'NAME': 'blog',
+      'USER': 'postgres',
+      'PASSWORD': 'pandora99',
+      'HOST': 'localhost',
+      'PORT': '5432'
+  },
+  #'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
