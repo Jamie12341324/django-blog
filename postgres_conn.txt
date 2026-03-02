@@ -1,0 +1,10 @@
+Database name:
+issue_eject_yeast_503753
+Database host:
+ep-mute-breeze-alnr2bha.c-3.eu-central-1.aws.neon.tech
+Username:
+neondb_owner
+Password:
+npg_emW80UYXuJRi
+Database URL:
+postgresql://neondb_owner:npg_emW80UYXuJRi@ep-mute-breeze-alnr2bha.c-3.eu-central-1.aws.neon.tech/issue_eject_yeast_503753
