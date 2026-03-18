@@ -27,7 +27,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-bmh9r&_w5=^v512vo$9oyyc$!$15!!hgj+naz#3k&$)5w2gp%v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.herokuapp.com','127.0.0.1']
 
@@ -41,11 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'django_summernote',
+    'cloudinary',
     'crispy_forms',
     'crispy_bootstrap5',
     'blog',
