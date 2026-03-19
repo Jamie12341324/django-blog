@@ -1,15 +1,23 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
 class About(models.Model):
+    """
+    stores a single personal infroamtion about a bloger witha profile image
+    """
     title = models.CharField(max_length=200)
+    profile_image= CloudinaryField('image',default="placeholder")
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     def __str__(self):
         return f"Title {self.title}"
 
 class CollaborateRequest(models.Model):
+    """
+    stores a single collabration request for the admin
+    """
     name = models.CharField(max_length=200)
     email = models.EmailField()
     message = models.TextField()
